@@ -1,0 +1,179 @@
+.account-section {
+    min-height: 100vh;
+    overflow-y: auto;
+    @extend %flex-center;
+}
+.account__main__wrapper {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include breakpoint(max-lg) {
+        flex-wrap: wrap;
+    }
+}
+.account__form__wrapper {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 60px;
+    border-radius: 25px;
+    overflow-y: auto;
+    position: relative;
+    background: rgba($body-bg,.3);
+    border: 1px solid $border-color;
+    backdrop-filter: blur(15px);
+    @include breakpoint(max-md) {
+        padding: 60px 0;
+        padding-left: 40px;
+        padding-right:40px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 40px 0;
+        padding-left: 30px;
+        padding-right:30px;
+    }
+    @include breakpoint(max-xs) {
+        padding-left: 15px;
+        padding-right:15px;
+    }
+    .logo {
+        margin-bottom: 50px;
+        position: relative;
+        @include breakpoint(max-xs) {
+            margin-bottom: 40px;
+        }
+        img {
+            max-width: 170px;
+        }
+    }
+    &.sign-up {
+        padding-left: 50px;
+        padding-right:50px;
+        max-width: 700px;
+        width: 100%;
+        @include breakpoint(max-xl) {
+            padding: 50px 30px;
+        }
+        @include breakpoint(max-md) {
+            padding-left: 40px;
+            padding-right:40px;
+        }
+        @include breakpoint(max-sm) {
+            padding: 40px 30px;
+            padding-left: 20px;
+            padding-right:20px;
+        }
+        @include breakpoint(max-xs) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+.account__form {
+    position: relative;
+    .cmn--btn, .btn {
+        padding: 10px 25px;
+    }
+    .forgot-pass {
+        font-size: 14px;
+    }
+}
+
+.account__content__wrapper {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 40%);
+    position: relative;
+    @include breakpoint(max-lg) {
+        width: calc(100%);
+    }
+    .content {
+        max-width: 500px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        padding: 0px 30px;
+        @include breakpoint(max-sm) {
+            padding: 0 15px;
+        }
+        .title {
+            font-size: 32px;
+            @include breakpoint(max-xs) {
+                font-size: 26px;
+            }
+        }
+    }
+}
+
+.form--control.style--two {
+    padding-left: 65px;
+    background: transparent;
+}
+select.form--control {
+    color: $body-color;
+    option {
+        color: $body-color;
+        background: $body-bg;
+        &:hover {
+            color: $dark !important;
+        }
+    }
+}
+.input-group-text {
+    border-color: $border-color;
+    background: rgba($base-color,.1);
+    border-right: none;
+
+}
+.input-group-text.style--two {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: rgba($base-color,.1);
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        clip-path: polygon(0 0, 0 100%, 42% 50%);
+    }
+}
+.input-group {
+    .form--control {
+        padding-left: 20px;
+    }
+    .form--control.style--two {
+        border-left: 0;
+    }
+}
+.form-group {
+    position: relative;
+}
+.input-pre-icon {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+    border-radius: 5px 0 0 5px;
+    color: $base-color;
+    @extend %flex-center;
+    padding: 10px 15px;
+    background: $body-bg;
+    background: rgba($base-color,.1);
+    &::before {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: rgba($base-color,.1);
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        clip-path: polygon(0 0, 0 100%, 42% 50%);
+    }
+}

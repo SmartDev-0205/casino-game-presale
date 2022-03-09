@@ -1,0 +1,1071 @@
+// About Section Starts Here
+.shape  {
+    position: absolute;
+}
+.bg_img {
+    position: relative;
+    &::before {
+        @include before-set;
+        background: $section-bg;
+        opacity: .9;
+    }
+    .container {
+        position: relative;
+    }
+}
+.about-section {
+    position: relative;
+    .shape1 {
+        top: 30px;
+        opacity: .1;
+        left: 50px;
+        max-width: 300px;
+        z-index: -1;
+    }
+}
+.section-thumb {
+    @include breakpoint(max-lg) {
+        max-width: 100%;
+        margin: 0;
+        margin-top: 50px;
+        img {
+            width: 100%;
+        }
+    }
+    @include breakpoint(max-xs) {
+        margin-top: 40px;
+    }
+}
+// About Section Ends Here
+
+
+// Game Section Starts Here
+.game-item {
+    text-align: center;
+    padding: 35px 40px;
+    border-radius: 10px;
+    background: $body-bg;
+    position: relative;
+    @include transition;
+    overflow: hidden;
+    @extend %shadow;
+    z-index: 1;
+    &::after {
+        @include before-set;
+        background: url(./../images/game/shape.png);
+        border-radius: 10px;
+        z-index: -1;
+        overflow: hidden;
+    }
+    @include breakpoint(max-xxl) {
+        padding: 35px 30px;
+    }
+    .ball {
+        @include before;
+        left: 0;
+        bottom: 0;
+        width: 35px;
+        height:35px;
+        border-radius: 50%;
+        @extend %shadow;
+        transform: rotate(45deg);
+        @include transition;
+    }
+    &::before {
+        @include before-set;
+        background: $body-bg;
+        opacity: .9;
+    }
+    &:hover {
+        @extend %shadow2;
+        .ball {
+            width: 45px;
+            height: 45px;
+        }
+    }
+    .game-inner {
+        position: relative;
+        z-index: 1;
+    }
+    &__thumb {
+        width: 100%;
+        height: 140px;
+        margin: 0 auto 25px;
+        border: 1px solid $border-color;
+        border-radius: 7px;
+        background: $section-bg;
+        padding: 10px;
+        @include breakpoint(max-xxl) {
+            height: 130px;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__content {
+        .title {
+            margin-bottom: 15px;
+            @include breakpoint(max-md) {
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            font-size: 18px;
+            @include breakpoint(max-md) {
+                font-size: 16px;
+            }
+        }
+        .invest-info {
+            text-transform: uppercase;
+        }
+        .invest-amount {
+            color: $base-color;
+        }
+        .cmn--btn {
+            margin-top: 25px;
+        }
+    }
+}
+// Game Section Ends Here
+
+
+// Transection Section Starts Here
+.transection-section {
+    position: relative;
+    .shape1 {
+        top: 0;
+        left: 0;
+        opacity: .1;
+        z-index: -1;
+    }
+}
+.tab-menu {
+    margin-bottom: 40px;
+    li {
+        padding: 3px 8px;
+        .cmn--btn {
+            color: $base-color;
+            background: transparent;
+            &::before {
+                visibility: hidden;
+                opacity: 0;
+            }
+            &.active {
+                color: $dark;
+                @extend %gradient-base;
+            }
+        }
+    }
+}
+.table {
+    thead {
+        tr {
+            th {
+                @extend %gradient-base;
+                color: $dark;
+                font-size: 18px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                font-size: 16px;
+            }
+            .amount {
+                color: $base-color;
+            }
+        }
+    }
+}
+// Transection Section Ends Here
+
+
+// Why Section Ends Here
+.why-section {
+    position: relative;
+    .shape1 {
+        left: -100px;
+        top: 50px;
+        z-index: -1;
+        opacity: .1;
+    }
+}
+.why-item {
+    max-width: 350px;
+    &__thumb {
+        color: $dark;
+        border: 6px solid $body-bg;
+        @extend %gradient-base;
+        font-size: 34px;
+        width: 65px;
+        height:65px;
+        border-radius: 50%;
+        @extend %flex-center;
+        @extend %shadow2;
+        margin-bottom: 20px;
+        @include breakpoint(max-md) {
+            margin-bottom: 15px;
+        }
+    }
+    &__content {
+        .title {
+            margin-bottom: 7px;
+            font-size: 26px;
+            @include breakpoint(max-xl) {
+                font-size: 22px;
+            }
+        }
+    }
+}
+// Why Section Ends Here
+
+
+// How Section Starts Here
+.how-section {
+    position: relative;
+    &::before  {
+        @include before-set;
+        background: $section-bg;
+        opacity: .9;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+div[class*='col'] {
+    &:last-child {
+        .how-item {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+.how-item {
+    text-align: center;
+    padding: 0 25px;
+    position: relative;
+    &:hover, &.active {
+        .title {
+            color: $base-color;
+        }
+        .how-item__thumb {
+            @extend %gradient-base;
+            color: $dark;
+        }
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 0;
+        border: 1px dashed rgba($base-color,.7);
+        top: 60px;
+        @include breakpoint(max-md) {
+            display: none;
+        }
+    }
+    &__thumb {
+        width: 120px;
+        height:120px;
+        background: $body-bg;
+        border-radius: 50%;
+        @extend %flex-center;
+        @extend %shadow2;
+        font-size: 46px;
+        margin:0 auto 30px;
+        position: relative;
+        @include breakpoint(max-lg) {
+            width: 100px;
+            height: 100px;
+            font-size: 36px;
+        }
+        @include breakpoint(max-sm) {
+            margin-bottom: 15px;
+        }
+        .badge {
+            position: absolute;
+            right: -10px;
+            top: 10px;
+            width: 30px;
+            height:30px;
+            @extend %gradient-base;
+            color: $dark !important;
+        }
+        img {
+            max-width: 70px;
+
+        }
+    }
+    &__content {
+        .title {
+            margin-bottom: 5px;
+            @include breakpoint(max-lg) {
+                font-size: 20px;
+            }
+        }
+        .continue-button {
+            margin-top: 25px;
+        }
+    }
+}
+.continue-button {
+    padding: 10px 30px;
+    // padding-right: 50px;
+    border-radius: 35px;
+    text-align: center;
+    font-size: 24px;
+    @extend %shadow;
+    line-height: 1;
+    
+}
+// How Section Ends Here
+
+
+// Faq Section Starts Here
+.faq-section {
+    position: relative;
+    .shape1 {
+        position: absolute;
+        right: 0px;
+        top: 50px;
+        max-width: 500px;
+        z-index: -1;
+        opacity: .15;
+    }
+}
+.faq-item {
+    height: auto;
+    padding: 10px 25px;
+    background: $section-bg;
+    border: 1px solid rgba($base-color,.15);
+    &:not(&:last-child) {
+        margin-bottom: 10px;
+    }
+    &.open {
+        .faq-item__title {
+            .title {
+                color: $base-color;
+            }
+            &::before {
+                transform: translateY(-50%) rotate(180deg);
+                color: $base-color;
+            }
+        }
+    }
+    &__title {
+        padding: 10px 0;
+        cursor: pointer;
+        position: relative;
+        &::before {
+            @include line-ico;
+            content: '\f107';
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            @include transition;
+        }
+        .title {
+            font-weight: 400;
+        }
+    }
+    &__content {
+        // padding-left: 20px;
+        display: none;
+        padding-bottom: 10px;
+    }
+}
+div[class*='col'] {
+    &:nth-child(even) {
+        >.faq-item {
+            padding-left: 25px;
+        }
+    }
+}
+// Faq Section Ends Here
+
+
+// Top Investor & Winner Section Starts Here
+.top-section {
+    position: relative;
+    &::before {
+        @include before-set;
+        background: $section-bg;
+        opacity: .9;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    .part-title {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.top-investor-slider {
+    .slick-list {
+        padding: 15px 0 !important;
+    }
+}
+
+.investor-item, .winner-item {
+    text-align: center;
+    &__thumb {
+        width: 100px;
+        height:100px;
+        margin: 0 auto 25px;
+        @extend %shadow2;
+        border-radius: 50%;
+        @extend %flex-center;
+        position: relative;
+        @include breakpoint(max-xl) {
+            width: 80px;
+            height: 80px;
+        }
+        img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: $base-color;
+            @include breakpoint(max-xl) {
+                width: 65px;
+                height:65px;
+            }
+        }
+    }
+    &__content {
+        .name {
+            font-size: 16px;
+            font-weight: 400;
+            @include breakpoint(max-xl) {
+                font-size: 14px;
+            }
+        }
+    }
+    .amount {
+        position: absolute;
+        padding: 0px 10px;
+        border-radius: 20px;
+        font-size: 13px;
+        @extend %shadow2;
+        top: calc(100% - 15px);
+        left: 50%;
+        transform: translateX(-50%);
+        @extend %gradient-base;
+        color: $dark;
+        font-weight: 600;
+    }
+}
+
+.cla-wrapper {
+    max-width: 250px;
+    margin: 0 auto;
+    position: relative;
+    .title {
+        font-size: 28px;
+    }
+    .thumb {
+        margin-top: 25px;
+        &::before {
+            position: absolute;
+            content: '';
+            box-shadow: 0 0 50px 50px rgba($base-color,.7);
+            border-radius: 50%;
+            @include transform-center;
+            transform: translateY(50px);
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+// Top Investor & Winner Section Ends Here
+
+
+// Testimonial Section Starts Here
+.testimonial-section {
+    position: relative;
+    .shape1 {
+        left: -100px;
+        top: 50px;
+        z-index: -1;
+        opacity: .1;
+    }
+}
+.testimonial-slider {
+    .slick-list {
+        padding: 15px 0 !important;
+        @include breakpoint(max-lg) {
+
+        }
+    }
+    .single-slide {
+        margin: 0 12px;
+    }
+}
+.testimonial-item {
+    text-align: center;
+    padding: 30px;
+    @extend %shadow;
+    position: relative;
+    @include breakpoint(max-xl) {
+        padding: 30px 15px;
+    }
+    &::before {
+        @include before-set;
+        background: $section-bg;
+        opacity: .95;
+    }
+    .testimonial-inner {
+        position: relative;
+        z-index: 1;
+    }
+    .quote-icon {
+        font-size: 52px;
+        line-height: 1;
+        @include gradient-color($gradient-base);
+        margin-bottom: 10px;
+    }
+    &__content {
+        margin-bottom: 25px;
+    }
+
+    .thumb-wrapper {
+        @extend %flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .thumb {
+        width: 65px;
+        height:65px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: $base-color;
+        img {
+            width: 100%;
+            height:100%;
+
+        }
+    }
+    .content {
+        padding-left: 15px;
+        text-align: left;
+        .designation {
+            font-size: 13px;
+            color: $base-color;
+        }
+    }
+}
+// Testimonial Section Ends Here
+
+
+// Blog Section Starts Here
+.blog-section {
+    position: relative;
+    &::before {
+        @include before-set;
+        background: $section-bg;
+        opacity: .9;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+.blog-item {
+    border-radius: 5px;
+    overflow: hidden;
+    // @extend %shadow;
+    border: 1px solid rgba($base-color,.15);
+    background: $body-bg;
+    padding: 20px;
+    &__thumb {
+        overflow: hidden;
+        position: relative;
+        border-radius: 3px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    &__content {
+        padding: 5px;
+        padding-top: 25px;
+        padding-bottom: 0;
+        @include breakpoint(max-xl) {
+            padding: 15px;
+        }
+        .title {
+            a {
+                @include text-wrap;
+            }
+        }
+    }
+    &:hover {
+        .blog-item__thumb {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.blog__meta {
+    i {
+        color: $base-color;
+        font-size: 16px;
+    }
+    font-size: 14px;
+}
+// Blog Section Ends Here
+
+
+
+// Blog Details Section Starts Here
+.blog-details-wrapper {
+    padding-right: 40px;
+    @include breakpoint(max-xl) {
+        padding-right: 0;
+    }
+    .details-thumb {
+        img {
+            width: 100%;
+        }
+    }
+    .details-content {
+        padding: 40px 0;
+        .meta-post {
+            @extend %flex;
+            align-items: center;
+            padding: 15px 0;
+            padding-bottom: 25px;
+            font-size: 15px;
+            li {
+                margin-right: 25px;
+                i {
+                    margin-right: 5px;
+                    font-size: 17px;
+                }
+                a {
+                    color: $base-color
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        .details-inner {
+            padding: 12px 0;
+            .subtitle {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.comment__area {
+    padding: 30px 30px 35px;
+    background: $section-bg;
+    border-radius: 5px;
+    @include breakpoint(max-sm) {
+        padding: 25px 20px;
+    }
+    &-title {
+        margin-bottom: 25px;
+    }
+    .poster__item {
+        .thumb {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            @include breakpoint(max-xs) {
+                width: 50px;
+                height: 50px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .content {
+            width: calc(100% - 70px);
+            padding-left: 20px;
+            @include breakpoint(max-xs) {
+                width: calc(100% - 50px);
+                padding-left: 15px;
+            }
+            .date {
+                font-weight: 500;
+                color: $white;
+                margin-top: 3px;
+                font-size: 15px;
+                @include breakpoint(max-md) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .comment__item {
+        padding: 0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+        &:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .comment__body {
+            margin-top: 20px;
+            padding-left: 90px;
+            @include breakpoint(max-md) {
+                padding-left: 0;
+            }
+        }
+    }
+}
+.write__comment__area {
+    padding: 30px 30px 35px;
+    background: $section-bg;
+    border-radius: 5px;
+    @include breakpoint(max-sm) {
+        padding: 25px 20px;
+    }
+    &-title {
+        margin-bottom: 25px;
+    }
+}
+.blog-sidebar {
+    position: sticky;
+    top: 20px;
+    padding: 35px 25px;
+    background: $section-bg;
+    @include breakpoint(max-xl) {
+        @include breakpoint(lg) {
+            padding: 0;
+            background: transparent;
+        }
+        @include breakpoint(max-xs) {
+            padding: 0;
+            background: transparent;
+        }
+    }
+}
+.recent-post-item {
+    @extend %flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &:hover .hover-line a {
+        background-size: 100% 2px !important;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .thumb {
+        width: 110px;
+        height: 80px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+    .content {
+        width: calc(100% - 110px);
+        padding-left: 15px;
+        .title {
+            @include text-wrap;
+            font-size: 16px;
+        }
+        .hover-line a {
+            position: relative;
+            display: inline;
+            background: linear-gradient(to right,currentColor 0%,currentColor 100%); 
+            background-size: 0px 2px;
+            background-position: 0 95%;
+            transition: background-size .25s cubic-bezier(.785,.135,.15,.86) 0s;
+            padding: .1% 0;
+            background-repeat: no-repeat;
+            width: 100%;
+            color: inherit;
+        }
+        .date {
+            font-size: 13px;
+            i {
+                color: $base-color;
+                margin-right: 4px;
+                font-size: 15px;
+
+            }
+        }
+    }
+}
+.info__list {
+    li {
+        width: 50%;
+        position: relative;
+        padding-left: 20px;
+        font-weight: 500;
+        @include breakpoint(max-xs) {
+            width: 100%;
+        }
+        &::before {
+            @include before;
+            width: 8px;
+            height:8px;
+            border-radius: 50%;
+            background: $base-color;
+            left: 0;
+            top: 16px;
+        }
+    }
+}
+.sidebar__item {
+    margin-bottom: 35px;
+}
+.search__form {
+    .form-group {
+        position: relative;
+        .btn, .cmn--btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            padding: 0 25px;
+            @include breakpoint(max-sm) {
+                padding: 12px 25px;
+                font-size: 15px;
+            }
+            @include breakpoint(max-xs) {
+                position: relative;
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+.cate-list {
+    li {
+        border-bottom: 1px solid $border-color;
+        font-weight: 500;
+        a {
+            &:hover {
+                color: $base-color;
+            }
+        }
+        &:last-child {
+            border: none;
+        }
+    }
+}
+// Blog Details Section Ends Here
+
+
+// Privacy Policy Section Starts Here
+.privacy-policy {
+    overflow: initial !important;
+}
+.privacy-policy-sidebar-menu {
+    position: sticky;
+    top: 20px;
+    li {
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px dashed $border-color;
+        &:last-child {
+            border: 0;
+        }
+        a {
+            padding: 12px 0;
+            color: $body-color;
+            display: block;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 3px;
+                height: 0;
+                background: $base-color;
+                right: 0;
+                top: 0;
+                @include transition;
+            }
+            &.active {
+                color: $base-color;
+                &::before {
+                    height: 100%;
+                    transform-origin: bottom;
+                }
+            }
+            &:hover {
+                color: $base-color;
+            }
+        }
+    }
+}
+.privacy-policy-content {
+    padding-left: 40px;
+    @include breakpoint(max-xl) {
+        padding-left: 20px;
+    }
+    @include breakpoint(max-lg) {
+        padding-left: 0px;
+    }
+    .content-item {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .title {
+            margin-bottom: 15px;
+        }
+        .info-list {
+            margin-top: 15px;
+            li {
+                padding-left: 25px;
+                position: relative;
+                &::before {
+                    @include line-ico;
+                    content: "\f101";
+                    left: 0;
+                    top: 6px;
+                    color: $base-color;
+                }
+            }
+        }
+    }
+}
+// Privacy Policy Section Ends Here
+
+
+.game-details-left {
+    @extend %flex-center;
+    padding: 50px;
+    background-color: $section-bg;
+    border-radius: 8px;
+    min-height: 100%;
+}
+
+.game-details-right {
+    padding: 50px;
+    background: $section-bg;
+    border-radius: 8px;
+}
+
+@media (max-width: 575px) {
+    .game-details-right {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 440px) {
+    .game-details-right {
+        padding: 30px 15px;
+    }
+}
+.single-select {
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    width:200px;
+    height:200px;
+    position: relative;
+    @include breakpoint(max-xl) {
+        width: 150px;
+        height:150px;
+    }
+    @include breakpoint(max-xs) {
+        width: 110px;
+        height:110px;
+    }
+    &.active {
+        position: relative;
+        border-color: #e6a25d;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.single-select.active::after {
+    @include line-ico;
+    font-size: 14px;
+    @extend %flex-center;
+    content: "\f00c";
+    top: -8px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    background-color: $success;
+    color: $white;
+    border-radius: 50%;
+}
+
+.coins-wrapper {
+    position: relative;
+    transform-style: preserve-3d;
+    @include transition;
+    width: 300px;
+    height: 300px;
+    animation: coin-rotate 2s linear infinite;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    @include breakpoint(max-xl) {
+        width: 250px;
+        height: 250px;
+    }
+    @include breakpoint(max-md) {
+        width: 200px;
+        height:200px;
+    }
+    @include breakpoint(max-xs) {
+        width: 150px;
+        height:150px;
+    }
+    &:hover {
+        transform: rotateY(180deg);
+    }
+    .front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes coin-rotate {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* game details css end */
+

@@ -1,0 +1,121 @@
+.btn, .cmn--btn {
+    color: $dark;
+    padding: 12px 35px;
+    font-size: 19px;
+    font-weight: 500;
+    font-family: $heading;
+    cursor: pointer;
+    outline: none;
+    @include transition;
+    border-radius: 10px;
+    @extend %gradient-base;
+    @extend %shadow;
+    z-index: 1;
+    border: 0;
+    @include breakpoint(max-xl) {
+        font-size: 18px;
+    }
+    &:hover {
+        color: $dark;
+        box-shadow: -5px -5px 20px 0px rgba($base-color,.6), 3px 5px 20px 0px rgba($primary-color,.2);
+        @extend %shadow3;
+    }
+    
+    &.btn--lg {
+        padding: 13px 35px !important;
+        font-size: 24px;
+        @include breakpoint(max-lg) {
+            font-size: 22px;
+        }
+        @include breakpoint(max-sm) {
+            font-size: 20px;
+        }
+    }
+    &.btn--md {
+        padding: 10px 25px !important;
+        font-size: 15px;
+    }
+    &.btn--sm {
+        padding: 5px 15px !important;
+        font-size: 14px;
+    }
+    &.btn--xs {
+        padding: 0px 10px !important;
+        font-size: 13px;
+    }
+}
+.cmn--btn {
+    position: relative;
+    overflow: hidden;
+    &::before, &::after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        top: 0;
+        @include transition;
+    }
+    &::before {
+        @include before-set;
+        top: -5px;
+        background: $base-color;
+    }
+    &:hover, &.active {
+        &::before {
+            top: -100%;
+        }
+    }
+}
+
+
+.video-button {
+    width: 75px;
+    height: 75px;
+    z-index: 1;
+    border-radius: 50%;
+    position: relative;
+    background: $gradient-base;
+    @extend %flex-center;
+    background-image: -moz-linear-gradient( 123deg, rgb(48,12,122) 0%, rgb(120,7,116) 100%);
+    @extend %shadow;
+    @include breakpoint(max-xl) {
+        width: 65px;
+        height: 65px;
+    }
+    @include breakpoint(max-xs) {
+        width: 60px;
+        height: 60px;
+    } 
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        // border: 15px solid #540A77;
+        animation: play-button 2s linear infinite;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        // border: 15px solid #540A77;
+        animation: play-button 1.8s linear infinite;
+        animation-delay: .5s;
+    }
+    i {
+        font-size: 24px;
+        color: $white;
+        z-index: 1;
+        @include breakpoint(max-xl) {
+            font-size: 20px;
+        }
+    }
+}

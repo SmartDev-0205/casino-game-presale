@@ -1,0 +1,163 @@
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin transform-center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+
+@mixin before-set {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+@mixin line-ico {
+    position: absolute;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: "Line Awesome Free";
+}
+@mixin font-ico {
+    position: absolute;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: "Font Awesome 5 Free";
+}
+
+@mixin text-wrap {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+
+
+//   transition 
+@mixin transition {
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+@mixin breakpoint($point) {
+    @if $point==xs {
+        @media (min-width: 320px) {
+            @content ;
+        }
+    }
+    @else if $point==max-xs {
+        @media (max-width: 450px) {
+            @content ;
+        }
+    }
+    @if $point==sm {
+        @media (min-width: 576px) {
+            @content ;
+        }
+    }
+    @else if $point==max-sm {
+        @media (max-width: 575px) {
+            @content ;
+        }
+    }
+    @else if $point==md {
+        @media (min-width: 768px) {
+            @content ;
+        }
+    }
+    @else if $point==max-md {
+        @media (max-width: 767px) {
+            @content ;
+        }
+    }
+    @else if $point==lg {
+        @media (min-width: 992px) {
+            @content ;
+        }
+    }
+    @else if $point==max-lg {
+        @media (max-width: 991px) {
+            @content ;
+        }
+    }
+    @else if $point==xl {
+        @media (min-width: 1200px) {
+            @content ;
+        }
+    }
+    @else if $point==max-xl {
+        @media (max-width: 1199px) {
+            @content ;
+        }
+    }
+    @else if $point==xxl {
+        @media (min-width: 1400px) {
+            @content ;
+        }
+    }
+    @else if $point==max-xxl {
+        @media (max-width: 1399px) {
+            @content ;
+        }
+    }
+}
+
+//Gadient Color Of Text
+@mixin gradient-color($gradient-color) {
+    background: $gradient-color;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+@mixin hover-state {
+    &:hover, &:active, &:focus {
+        @content;
+    }
+}
+@mixin hover-full-state {
+    &:hover, &:active, &:focus, &.active {
+        @content;
+    }
+}
+@mixin hover-focus-state {
+    &:hover, &:focus {
+        @content;
+    }
+}
+@mixin active-focus-state {
+    &:active, &.active, &:focus {
+        @content;
+    }
+}
+@mixin hover-active-state {
+    &:hover, &:active, &.active {
+        @content;
+    }
+}
+@mixin before-after-state {
+    &:before, &:after {
+        @content;
+    }
+}
+
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}

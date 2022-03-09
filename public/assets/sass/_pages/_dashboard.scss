@@ -1,0 +1,309 @@
+.dashboard__card {
+    background: $body-bg;
+    padding: 30px;
+    border-radius: 10px;
+    @extend %flex;
+    justify-content: space-between;
+    position: relative;
+    @extend %shadow;
+    @include transition;
+    &:hover {
+        @extend %shadow2;
+
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        top: -2px;
+        background: $gradient-base;
+        border-radius: 10px;
+        z-index: -1;
+        opacity: .8;
+    }
+    @include breakpoint(max-xxl) {
+        @include breakpoint(xl) {
+            padding: 25px;
+        }
+    }
+    &-content {
+        .price {
+            font-family: $body;
+            font-size: 36px;
+            color: $white;
+            @include breakpoint(max-xxl) {
+                font-size: 32px;
+            }
+        }
+        .info {
+            color: $white;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.1;
+            @include breakpoint(max-xxl) {
+                @include breakpoint(xl) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    &-icon {
+        color: $white;
+        background: $gradient-base;
+        font-size: 36px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        @extend %flex-center;
+        // text-shadow: 2px 3px 5px;
+        @include breakpoint(max-xxl) {
+            @include breakpoint(lg) {
+                width: 65px;
+                height:65px;
+                font-size: 24px;
+            }
+            @include breakpoint(max-xs) {
+                width: 65px;
+                height:65px;
+                font-size: 24px;
+            }
+        }
+    }
+    .view-btn {
+        margin-top: 17px;
+        padding: 2px 12px;
+        border-radius: 5px;
+        color: $dark;
+        background: $gradient-base;
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+// Method Card
+.method-card {
+    padding: 15px;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    background: $section-bg;
+}
+.method-card-info {
+    font-size: 14px;
+    margin: 0;
+    li {
+        padding: 5px 0;
+    }
+
+}
+
+.deposit-group{
+    @extend %flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 15px;
+    border-bottom: 1px solid $border-color;
+    .title {
+        font-size: 17px;
+        font-weight: 500;
+    }
+}
+
+.custom--card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+// Profile Setting
+.profile__thumb__edit {
+    max-width: 450px;
+    margin: 0 auto;
+    @include breakpoint(max-xs) {
+        padding: 25px 15px;
+    }
+    @include breakpoint(xxl) {
+        margin-right: 15px;
+    }
+    .thumb {
+        max-width: 300px;
+        width: 100%;
+        height: 320px;
+        margin: 0 auto;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 25px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.copybtn {
+    font-size: 20px !important;
+    padding: 0 18px !important;
+    line-height: 45px;
+}
+
+
+// Create Ticket 
+.ticket-box {
+    background: $body-bg;
+    border-radius: 10px;
+    @include breakpoint(max-lg) {
+        .btn, .cmn--btn {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    }
+}
+
+.reset-header {
+    .icon {
+        width: 75px;
+        height: 75px;
+        margin: 0 auto 15px;
+        background: $gradient-base;
+        @extend %flex-center;
+        font-size: 30px;
+        border-radius: 50%;
+        color: $dark;
+    }
+}
+
+.dashboard-sidebar {
+    background: $section-bg;
+    position: relative;
+    .close-dashboard {
+        font-size: 42px;
+        right: 10px;
+        top: 10px;
+        position: absolute;
+        cursor: pointer;
+    }
+    @include breakpoint(max-lg) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        height: 100vh;
+        overflow-y: auto;
+        max-width: 300px;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100px);
+        @include transition;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0px);
+
+        }
+    }
+}
+.user-dashboard {
+    @include breakpoint(max-lg) {
+        padding-top: 0 !important;
+    }
+}
+.user-toggler-wrapper {
+    width: 100%;
+    padding: 10px 25px;
+    background: $gradient-base;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    .title {
+        color: $dark;
+        @include breakpoint(max-md) {
+            font-size: 18px !important;
+        }
+    }
+    .user-toggler {
+        line-height: 1;
+        border-radius: 50%;
+        overflow: hidden;
+        font-size: 36px;
+        color: $dark;
+        @include breakpoint(max-sm) {
+            font-size: 36px;
+        }
+    }
+}
+.dashboard-user {
+    text-align: center;
+    padding: 25px;
+    padding-bottom: 35px;
+    padding-top: 60px;
+    @include breakpoint(max-xl) {
+        padding-top: 40px;
+    }
+    .user-thumb {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        border: 2px solid $base-color;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .user-content {
+        span {
+            margin-bottom: 5px;
+        }
+        .name {
+            margin-bottom: 15px;
+        }
+        .user-option {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li {
+                a {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 20px;
+                    @include center;
+                    color: $white;
+                    background: $gradient-base;
+                    margin: 5px;
+                    border-radius: 50%;
+
+                }
+            }
+        }
+    }
+}
+.user-dashboard-tab {
+    margin: 0;
+    font-size: 17px;
+    li {
+        padding: 0;
+        border-bottom: 1px dashed rgba($base-color, .15);
+        a {
+            padding: 10px 40px;
+            display: block;
+            @include breakpoint(max-xl) {
+                padding: 7px 20px;
+                font-size: 16px;
+            }
+            &:hover, &.active {
+                background: $base-color;
+                color: $dark;
+            }
+        }
+        &:last-child {
+            border: none;
+        }
+    }
+}

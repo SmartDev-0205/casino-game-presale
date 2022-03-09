@@ -1,0 +1,295 @@
+.table--responsive--md {
+    @include breakpoint(max-md) {
+        thead {
+            display: none;
+        }
+        tbody {
+            tr {
+                display: block;
+                td {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 15px;
+                    border: none;
+                    border-bottom: 1px solid $border-color;
+                    @include breakpoint(max-lg) {
+                        font-size: 14px !important;
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                    &::before {
+                        content: attr(data-label);
+                        font-family: $heading;
+                        font-size: 16px;
+                        color: $title-color;
+                        font-weight: 500;
+                        @include breakpoint(max-sm) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.table--responsive--lg {
+    @include breakpoint(max-lg) {
+        thead {
+            display: none;
+        }
+        tbody {
+            tr {
+                display: block;
+                td {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 15px;
+                    border: none;
+                    border-bottom: 1px solid $border-color;
+                    @include breakpoint(max-lg) {
+                        font-size: 14px !important;
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                    &::before {
+                        content: attr(data-label);
+                        font-family: $heading;
+                        font-size: 16px;
+                        color: $title-color;
+                        font-weight: 500;
+                        @include breakpoint(max-sm) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.table--responsive--xl {
+    @include breakpoint(max-xl) {
+        thead {
+            display: none;
+        }
+        tbody {
+            tr {
+                display: block;
+                td {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 15px;
+                    border: none;
+                    border-bottom: 1px solid $border-color;
+                    @include breakpoint(max-lg) {
+                        font-size: 14px !important;
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                    &::before {
+                        content: attr(data-label);
+                        font-family: $heading;
+                        font-size: 16px;
+                        color: $title-color;
+                        font-weight: 500;
+                        @include breakpoint(max-sm) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table {
+    margin: 0;
+    border: none;
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+        tr {
+            // background: rgba($base-color,1);
+            th {
+                padding: 10px 15px;
+                font-family: $heading;
+                color: $white;
+                border: none;
+                font-size: 15px;
+                font-weight: 500;
+                border: 1px solid $border-color;
+            }
+        }
+    }
+    tbody {
+        font-size: 15px;
+        tr {
+            &:nth-child(odd) {
+                background: $section-bg;
+            }
+            td {
+                color: $white;
+                vertical-align: middle;
+                padding: 10px 15px;
+                border-width: 1px;
+                border-color: $border-color;
+            }
+        }
+    }
+}
+
+
+.custom--card {
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    background: $body-bg;
+}
+
+.custom--card .card--header,
+.custom--card .card--footer {
+    background: $section-bg;
+    color: $dark;
+    text-align: center;
+    .card-title {
+        color: $white;
+        margin: 0;
+    }
+}
+
+.custom--card.card--primary .card--header,
+.custom--card.card--primary .card--footer {
+    background: $primary-color
+}
+.custom--card.card--base .card--header,
+.custom--card.card--base .card--footer {
+    background: $base-color;
+
+}
+
+.custom--card .card--header,
+.custom--card .card--footer {
+    padding: 15px 25px;
+    border-color: $border-color !important;
+    @include breakpoint(max-sm) {
+        padding: 10px 20px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 8px 15px;
+    }
+}
+.custom--card .card--body {
+    padding: 25px;
+    @include breakpoint(max-sm) {
+        padding: 20px;
+    }
+    @include breakpoint(max-xs) {
+        padding: 15px;
+    }
+}
+
+.custom--card.card--lg .card--header,
+.custom--card.card--lg .card--footer {
+    padding: 20px 35px;
+    @include breakpoint(max-md) {
+        padding: 15px 25px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 10px 20px;
+    }
+    @include breakpoint(max-xs) {
+        padding: 8px 15px;
+    }
+}
+.custom--card.card--lg .card--body {
+    padding: 35px;
+    @include breakpoint(max-md) {
+        padding: 25px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 20px;
+    }
+    @include breakpoint(max-xs) {
+        padding: 15px;
+    }
+}
+
+.custom--card.card--md .card--header,
+.custom--card.card--md .card--footer {
+    padding: 10px 20px;
+}
+.custom--card.card--md .card--body {
+    padding: 20px 20px;
+
+}
+
+.badge {
+    padding: 5px 12px;
+    color: $white;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    &:hover {
+        color: $white;
+    }
+    &.badge--sm {
+        padding: 3px 10px;
+        font-size: 12px;
+    }
+    &.badge--xs {
+        padding: 2px 8px;
+        font-size: 11px;
+    }
+    &.badge--lg {
+        padding: 7px 15px;
+        font-size: 15px;
+    }
+    &.badge--cap {
+        border-radius: 15px;
+        padding: 5px 15px;
+    }
+    &.badge--round {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 7px;
+        line-height: 0.75;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.custom--modal .modal--footer,
+.custom--modal .modal--body,
+.custom--modal .modal--header {
+    border-color: $border-color;
+    background: $section-bg;
+    border-color: $border-color !important;
+}
+
+.custom--modal .modal--footer .modal-title,
+.custom--modal .modal--header .modal-title {
+    margin: 0;
+    color: $title-color;
+}
+
+.custom--modal .modal--footer .btn-close,
+.custom--modal .modal--header .btn-close {
+    background: transparent;
+    font-size: 20px;
+    line-height: 1;
+    color: $danger;
+    opacity: 1;
+}
+
+.custom--modal .modal-content {
+    border: none;
+    color: $white;
+    background: $section-bg;
+}

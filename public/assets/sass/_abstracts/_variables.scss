@@ -1,0 +1,423 @@
+$bootstrap-sass-asset-helper: false !default;
+
+// font-family
+$heading: 'Josefin Sans', sans-serif;
+$body:  'Open Sans', sans-serif;
+
+//Description line height
+$lh-p: 1.7;
+
+// Title Color
+$title-color: #fff;
+
+// Essential Colors
+$base-color: #FFC827;
+$gradient-base: linear-gradient( 0deg, #ff9c19 40%, #ffdd2d 110%);
+$gradient-base-rev: linear-gradient( 180deg, #ffdd2d 40%, #ECD40E 100%);
+ 
+
+
+$primary-color: #ff5201;
+$secondary-color: #78818A;
+
+$body-color : rgba(255, 255, 255, 0.8);
+$border-color: rgba(255, 255, 255, 0.17);
+
+$section-bg : #2e0327;
+$body-bg : #350b2d;
+
+$theme-one: #FF3653;
+$theme-two: #18D39E;
+$theme-three: #0C93D2;
+$theme-four: #F6A200;
+$theme-five: #09389E;
+
+.theme-one {
+   color: $theme-one !important;
+}
+.theme-one-bg {
+   background: $theme-one !important;
+}
+.theme-two {
+   color: $theme-two !important;
+}
+.theme-two-bg {
+   background: $theme-two !important;
+}
+.theme-three {
+   color: $theme-three !important;
+}
+.theme-three-bg {
+   background: $theme-three !important;
+}
+.theme-four {
+   color: $theme-four !important;
+}
+.theme-four-bg {
+   background: $theme-four !important;
+}
+
+
+// font-size
+$fs-base: 16px;
+$fs-large: 18px; 
+$fs-small: 14px;
+.fs-sm {
+   font-size: $fs-small;
+}
+
+$fs-h1: 70px;
+$fs-h2: 50px;
+$fs-h3: 26px;
+$fs-h4: 24px;
+$fs-h5: 20px;
+$fs-h6: 18px;
+
+
+$white: #fff;
+$dark: rgb(31, 31, 35);
+
+
+$gradient-one: linear-gradient(top, #fdb125 45%, #e07e1e 48%, #fcb100 85%);
+
+$gradient-two: linear-gradient( -40deg, #37ACE2 19%, #03CAAE 81%);
+$gradient-two-rev: linear-gradient( 140deg, #37ACE2 19%, #03CAAE 81%);
+$gradient-three: linear-gradient( -40deg, rgb(179,29,163) 9%, rgb(214,63,135) 50%, rgb(249,96,106) 88%); 
+$gradient-four: linear-gradient( -40deg, rgb(126,42,252) 39%, rgb(144,61,247) 70%, rgb(162,80,242) 88%);
+ 
+.gradient-one {
+   background: $gradient-one !important;
+}
+.gradient-two {
+   background: $gradient-two !important;
+}
+.gradient-three {
+   background: $gradient-three !important;
+}
+.gradient-four {
+   background: $gradient-four !important;
+}
+
+// social-media icons color
+$facebook: #3b5998;
+$twitter: #55acee;
+$instagram: #e4405f;
+$whatsapp: #25d366;
+$vimeo : #1ab7ea;
+$behance: #1769ff;
+$linkedin: #007bb5;
+$pinterest: #DE1436;
+$skype: #2fb7df;
+$youtube: #cd201f;
+$google: #dd4b39;
+
+$red: #f53b57;
+$green: #16cc3e;
+$blue: #2c87f7;
+$pink: #F763C6;
+$yellow: #dec32b;
+$purple: #630094;
+$bluish: #52667e;
+$star: #FFCD00;
+$tomato: #F76045;
+
+
+// Color
+$success: #28C76F;
+$danger: #EA5455;
+$warning: #FF9F43;
+$info: #1E9FF2;
+
+
+/* Text Color */
+.text--primary {
+    color: $primary-color !important;
+}
+.text--secondary {
+    color: $secondary-color !important;
+}
+.text--base {
+    color: $base-color !important;
+}
+.text--danger {
+   color: $danger !important;
+}
+.text--warning {
+   color: $warning !important;
+}
+.text--info {
+   color: $info !important;
+}
+.text--success {
+   color: $success !important;
+}
+.text--dark {
+   color: #343A40 !important;
+}
+.text--white {
+   color: #fff !important;
+}
+
+/* Btn Color */
+.border--white {
+   border-color: rgba($white,.15) !important;
+}
+.border--dark {
+   border-color: rgba($dark,.15) !important;
+}
+.border--base {
+   border-color: rgba($base-color,.15) !important;
+}
+.border--primary {
+   border-color: rgba($primary-color,.15) !important;
+}
+.border--secondary {
+   border-color: rgba($secondary-color,.15) !important;
+}
+
+
+.btn--outline {
+   border: 1px solid $base-color !important;
+}
+.btn--border {
+   border: 1px solid $base-color !important;
+}
+
+.btn--round {
+   border-radius: 35px !important;
+}
+.radius-0 {
+   border-radius: 0 !important;
+}
+.radius-5 {
+   border-radius: 5px !important;
+}
+.radius-50 {
+   border-radius: 50% !important;
+}
+
+
+.btn--primary {
+   color: #fff !important;
+   background: $primary-color !important;
+   border-color: $primary-color !important;
+}
+.btn--secondary {
+   color: #fff !important;
+   background: $secondary-color !important;
+   border-color: $secondary-color !important;
+}
+.btn--base {
+   color: #fff !important;
+   background: $base-color !important;
+   border-color: $base-color !important;
+}
+.btn--danger {
+   color: #fff !important;
+   background: $danger !important;
+   border-color: $danger !important;
+}
+.btn--warning {
+   color: #fff !important;
+   background: $warning !important;
+   border-color: $warning !important;
+}
+.btn--info {
+   color: #fff !important;
+   background: $info !important;
+   border-color: $info !important;
+}
+.btn--success {
+   color: #fff !important;
+   background: $success !important;
+   border-color: $success !important;
+}
+.btn--dark {
+   color: #fff !important;
+   background: #343A40 !important;
+   border-color: #343A40 !important;
+}
+
+// Badge
+.badge--primary {
+   color: #fff !important;
+   background: $primary-color !important;
+   border-color: $primary-color !important;
+}
+.badge--secondary {
+   color: #fff !important;
+   background: $secondary-color !important;
+   border-color: $secondary-color !important;
+}
+.badge--base {
+   color: #fff !important;
+   background: $base-color !important;
+   border-color: $base-color !important;
+}
+.badge--danger {
+   color: #fff !important;
+   background: $danger !important;
+   border-color: $danger !important;
+}
+.badge--warning {
+   color: #fff !important;
+   background: $warning !important;
+   border-color: $warning !important;
+}
+.badge--info {
+   color: #fff !important;
+   background: $info !important;
+   border-color: $info !important;
+}
+.badge--success {
+   color: #fff !important;
+   background: $success !important;
+   border-color: $success !important;
+}
+.badge--dark {
+   color: #fff !important;
+   background: #343A40 !important;
+   border-color: #343A40 !important;
+}
+
+
+/* Background Color */
+.bg--primary {
+   background: $primary-color !important;
+}
+.bg--secondary {
+   background: $secondary-color !important;
+}
+.bg--base {
+   background: $base-color !important;
+}
+.bg--danger {
+   background: $danger !important;
+}
+.bg--warning {
+   background: $warning !important;
+}
+.bg--info {
+   background: $info !important;
+}
+.bg--success {
+   background: $success !important;
+}
+.bg--dark {
+   background: #343A40 !important;
+}
+.bg--white {
+   background: #fff !important;
+}
+.bg--none {
+   background: transparent !important;
+}
+
+// Shadow
+.shadow--base {
+   box-shadow: 0 0 25px rgba($base-color,.45) !important;
+}
+.shadow--primary {
+   box-shadow: 0 0 25px rgba($primary-color,.35) !important;
+}
+.shadow--secondary {
+   box-shadow: 0 3px 15px rgba($secondary-color,.45) !important;
+}
+
+
+// Social Media Colors
+.facebook {
+   color: $facebook !important;
+   border: 1px solid rgba($facebook,.9) !important;
+   &:hover {
+      background: $facebook !important;
+      color: $white !important;
+   }
+}
+.twitter {
+   color: $twitter !important;
+   border: 1px solid rgba($twitter,.9) !important;
+   &:hover {
+      background: $twitter !important;
+      color: $white !important;
+   }
+}
+.vimeo {
+   color: $vimeo !important;
+   border: 1px solid rgba($vimeo,.9) !important;
+   &:hover {
+      background: $vimeo !important;
+      color: $white !important;
+   }
+}
+.instagram {
+   color: $instagram !important;
+   border: 1px solid rgba($instagram,.9) !important;
+   &:hover {
+      background: $instagram !important;
+      color: $white !important;
+   }
+}
+.youtube {
+   color: $youtube !important;
+   border: 1px solid rgba($youtube,.9) !important;
+   &:hover {
+      background: $youtube !important;
+      color: $white !important;
+   }
+}
+.facebook-bg {
+   background: $facebook !important;
+   border-color: transparent !important;
+   &:hover {
+      background:$facebook !important;
+      color: $white !important;
+   }
+}
+.twitter-bg {
+   background: $twitter !important;
+   border-color: transparent !important;
+   &:hover {
+      background:$twitter !important;
+      color: $white !important;
+   }
+}
+.vimeo-bg {
+   background: $vimeo !important;
+   border-color: transparent !important;
+   &:hover {
+      background:$vimeo !important;
+      color: $white !important;
+   }
+}
+.instagram-bg {
+   background: $instagram !important;
+   border-color: transparent !important;
+   &:hover {
+      background:$instagram !important;
+      color: $white !important;
+   }
+}
+.youtube-bg {
+   background: $youtube !important;
+   border-color: transparent !important;
+   &:hover {
+      background:$youtube !important;
+      color: $white !important;
+   }
+}
+.google-bg {
+   background: $google !important;
+   border-color: transparent !important;
+   &:hover {
+      background:$google !important;
+      color: $white !important;
+   }
+}
+
+.pb-80 {
+   padding-bottom: 80px;
+}
+.pt-80 {
+   padding-top: 80px;
+}

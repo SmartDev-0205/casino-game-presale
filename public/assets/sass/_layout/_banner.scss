@@ -1,0 +1,154 @@
+.banner-section {
+    padding: 160px 0 80px;
+    position: relative;
+    @include breakpoint(max-xxl) {
+        padding: 150px 0px 50px;
+    }
+    &::before {
+        @include before-set;
+        background: $section-bg;
+        opacity: .75;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.banner-content {
+    max-width: 700px;
+    position: relative;
+    @include breakpoint(max-xxl) {
+        max-width: 650px;
+    }
+    @include breakpoint(max-xl) {
+        max-width: 550px;
+    }
+    @include breakpoint(max-lg) {
+        max-width: 100%;
+        text-align: center;
+    }
+    .shape1 {
+        position: absolute;
+        top: -100px;
+        left: -150px;
+        max-width: 250px;
+        opacity: .25;
+        z-index: -1;
+    }
+    &__title {
+        margin-bottom: 15px;
+        @include breakpoint(max-xxl) {
+            font-size: 62px;
+        }
+        @include breakpoint(max-xl) {
+            font-size: 56px;
+        }
+        @include breakpoint(max-md) {
+            font-size: 46px;
+        }
+        @include breakpoint(max-xs) {
+            font-size: 32px;
+        }
+        span {
+            text-shadow: 3px -4px 8px rgba($base-color,.3);
+        }
+    }
+    &__subtitle {
+        font-size: 22px;
+        max-width: 550px;
+        @include breakpoint(max-xl) {
+            font-size: 22px;
+        }
+        @include breakpoint(max-lg) {
+            margin: 0 auto;
+        }
+        @include breakpoint(max-md) {
+            font-size: 20px;
+        }
+        @include breakpoint(max-xs) {
+            font-size: 18px;
+        }
+    }
+    .button-wrapper {
+        margin: -5px -10px;
+        margin-top: 50px;
+        @include breakpoint(max-md) {
+            margin-top: 40px;
+        }
+        .cmn--btn {
+            margin: 5px 10px;
+            @extend %gradient-base;
+            i {
+                font-size: 22px;
+                line-height: 1;
+                transform: translateY(2px);
+            }
+        }
+    }
+    
+}
+.banner-thumb {
+    max-width: 400px;
+    @include breakpoint(max-xxl) {
+        max-height: 600px;
+    }
+    @include breakpoint(max-xl) {
+        max-width: 300px;
+    }
+    @include breakpoint(max-lg) {
+        max-width: 100%;
+        margin-top: 50px;
+        img {
+            width: 100%;
+        }
+    }
+    @include breakpoint(max-xs) {
+        margin-top: 30px;
+    }
+}
+
+
+// Inner Banner
+.inner-banner {
+    padding: 170px 0 110px;
+    position: relative;
+    @include breakpoint(max-xl) {
+        padding-top: 160px;
+    }
+    @include breakpoint(max-lg) {
+        padding-top: 140px;
+        padding-bottom: 80px;
+    }
+    @include breakpoint(max-sm) {
+        padding-top: 120px;
+        padding-bottom: 70px;
+    }
+    &::before {
+        opacity: .75 !important;
+    }
+    .container {
+        position: relative;
+    }
+}
+
+.breadcrumbs {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+    li {
+        padding: 3px 10px;
+        a {
+            position: relative;
+            padding-right: 35px;
+            &::before {
+                @include font-ico;
+                content: '\f30b';
+                font-size: 18px;
+                right: 0;
+                top: 2px;
+                color: $white;
+            }
+        }
+    }
+}
